@@ -41,7 +41,7 @@ pipeline {
         }
         stage('Send Email'){
             steps {
-                emailtext(
+                emailext(
                     subject: 'Deployment Successful on EC2',
                     body: 'The application has been successfully deployed.http://13.53.235.252:3000',
                     to: "$EMAIL"
